@@ -4,7 +4,7 @@ export function mainHeaderTemplate() {
 	return `
 	<div class="container header-content">
 		<div class="logo">
-			<a href="./index.html">
+			<a href="/Proyecto1/index.html">
 				<img
 					src="https://res.cloudinary.com/do0white9/image/upload/v1773181650/Bootcamp/Proyecto-1/joaquin_circulo_eba1c5.png"
 					alt="Logo JC"
@@ -14,11 +14,11 @@ export function mainHeaderTemplate() {
 
 		<nav class="nav">
 			<ul class="nav-list">
-				<li><a href="./about.html">About</a></li>
-				<li><a href="./index.html#skills-section">Skills</a></li>
-				<li><a href="./index.html#cheatsheets-section">Cheatsheets</a></li>
-				<li><a href="./recursos.html">Recursos</a></li>
-				<li><a href="./contacto.html">Contacto</a></li>
+				<li><a href="/Proyecto1/about.html">About</a></li>
+				<li><a href="/Proyecto1/index.html#skills-section">Skills</a></li>
+				<li><a href="/Proyecto1/index.html#cheatsheets-section">Cheatsheets</a></li>
+				<li><a href="/Proyecto1/recursos.html">Recursos</a></li>
+				<li><a href="/Proyecto1/contacto.html">Contacto</a></li>
 			</ul>
 		</nav>
 
