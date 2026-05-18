@@ -1,14 +1,10 @@
 // Exportar la funcion para renderizar el header.
 export function mainHeaderTemplate() {
 
-	// Detectar si estamos en un subdirectorio o en la raíz
-    const enSubdirectorio = window.location.pathname.split('/').filter(Boolean).length > 1;
-    const base = enSubdirectorio ? '../' : './';
-
 	return `
 	<div class="container header-content">
 		<div class="logo">
-			<a href="${base}index.html">
+			<a href="./index.html">
 				<img
 					src="https://res.cloudinary.com/do0white9/image/upload/v1773181650/Bootcamp/Proyecto-1/joaquin_circulo_eba1c5.png"
 					alt="Logo JC"
@@ -18,11 +14,11 @@ export function mainHeaderTemplate() {
 
 		<nav class="nav">
 			<ul class="nav-list">
-				<li><a href="${base}about.html">About</a></li>
-				<li><a href="${base}index.html#skills-section">Skills</a></li>
-				<li><a href="${base}index.html#cheatsheets-section">Cheatsheets</a></li>
-				<li><a href="${base}recursos.html">Recursos</a></li>
-				<li><a href="${base}contacto.html">Contacto</a></li>
+				<li><a href="./about.html">About</a></li>
+				<li><a href="./index.html#skills-section">Skills</a></li>
+				<li><a href="./index.html#cheatsheets-section">Cheatsheets</a></li>
+				<li><a href="./recursos.html">Recursos</a></li>
+				<li><a href="./contacto.html">Contacto</a></li>
 			</ul>
 		</nav>
 
