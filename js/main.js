@@ -7,14 +7,11 @@ import { renderSkills } from "./utils/skillsList.js";
 //Importar lista de skills
 import { skillsData } from "./data/skills.js";
 
-//Funcion para el modo oscuro
-import { darkMode } from "./utils/darkMode.js";
+//Funcion para el modo oscuro y para comprobar el estado del modo oscuro al cargar la pagina
+import { darkMode, comprobarDarkMode } from "./utils/darkMode.js";
 
 //Funcion para el menu hamburguesa
 import { menu } from "./utils/menu.js";
-
-//Funcion para comprobar el estado del modo oscuro al cargar la pagina
-import { comprobarDarkMode } from "./utils/darkMode.js";
 
 //Importar lista de cheetsheets
 import { cheatsheetsData } from "./data/cheatsheets.js";   
@@ -25,11 +22,8 @@ import { renderCheatsheet } from "./utils/cheatsheetsList.js";
 //Importar lista de recursos
 import { resources } from "./data/resources.js";
 
-//Importar funciones para renderizar la lista de recursos y las tabs de categorias de recursos
-import { renderizarTabsRecursos, renderizarTabsPanel } from "./utils/resourcesGenerator.js"
-
-//Importar funcion para añadir evento a las tabs de recursos
-import { tabsRecursosListener } from "./utils/resourcesGenerator.js"
+//Importar funciones para renderizar la lista de recursos y las tabs de categorias de recursos y para añadir evento a las tabs de recursos
+import { renderizarTabsRecursos, renderizarTabsPanel, tabsRecursosListener } from "./utils/resourcesGenerator.js"
 
 //Importar funcion para renderizar el widget con el clima y para obtener la geolocalizacion
 import { getLocalWeather } from "./utils/weather.js"
@@ -76,7 +70,11 @@ if (recursosContainer && panelesContainer) {
 }
 
 // Añadir evento al botón de modo oscuro
-document.getElementById("btnModoOscuro").addEventListener("click", darkMode);
+const btnModoOscuro = document.getElementById("btnModoOscuro");
+
+if (btnModoOscuro) {
+    btnModoOscuro.addEventListener("click", darkMode);
+}
 
 // Inicializar el menú hamburguesa
 menu();

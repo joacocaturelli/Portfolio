@@ -44,6 +44,10 @@ const fetchWeather = async (location) => { // Funcion para llamar a la API
     } catch (error) {
 
         console.error('No se pudo obtener el clima', error);
+
+        const widget = document.getElementById('weather-container');
+        
+        if (widget) widget.innerHTML = `<span style="font-size:0.8rem">⚠️ Sin datos</span>`;
     }
 }
 

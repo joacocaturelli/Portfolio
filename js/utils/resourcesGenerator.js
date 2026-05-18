@@ -39,8 +39,6 @@ export function tabsRecursosListener() {
             tabs.forEach(t => t.classList.remove("active"));
             panels.forEach(p => p.classList.remove("active"));
 
-            console.log(tabs);
-
             // Agregar la clase "active" al botón y panel correspondientes
             tab.classList.add("active");
             panels[indice].classList.add("active");
