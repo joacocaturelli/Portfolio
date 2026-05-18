@@ -21,6 +21,8 @@ export function mainHeaderTemplate() {
 			</ul>
 		</nav>
 
+		<div id="weather-container"></div>
+
 		<div class="icon-container">
 			<button class="dark-mode-toggle" id="btnModoOscuro" aria-label="Cambiar modo oscuro">
 				<img class="icon sun" id="iconToggle"

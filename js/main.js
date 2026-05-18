@@ -31,10 +31,20 @@ import { renderizarTabsRecursos, renderizarTabsPanel } from "./utils/resourcesGe
 //Importar funcion para añadir evento a las tabs de recursos
 import { tabsRecursosListener } from "./utils/resourcesGenerator.js"
 
+//Importar funcion para renderizar el widget con el clima y para obtener la geolocalizacion
+import { getLocalWeather } from "./utils/weather.js"
+
 
 // Renderizar el header y el footer
-document.getElementById("main-header").innerHTML = mainHeaderTemplate();
-document.getElementById("main-footer").innerHTML = mainFooterTemplate();
+const header = document.getElementById("main-header");
+if (header) {
+    header.innerHTML = mainHeaderTemplate();
+}
+
+const footer = document.getElementById("main-footer");
+if (footer) {
+    footer.innerHTML = mainFooterTemplate();
+}
 
 // Renderizar la lista de skills dominadas solo si existe el contenedor de skills en la pagina, para evitar errores en paginas que no lo tengan
 const skillsContainer = document.getElementById("skills-container");
@@ -72,5 +82,5 @@ document.getElementById("btnModoOscuro").addEventListener("click", darkMode);
 menu();
 comprobarDarkMode();
 
-
-
+// Inicializar el widget del clima
+getLocalWeather()

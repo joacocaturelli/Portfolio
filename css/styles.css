@@ -12,7 +12,7 @@
 
   --color-border: rgba(0, 0, 0, 0.3);
 
-  --header-height: 70px;
+  --header-height: 80px;
   --main-margin-top: 94px;
   --border-radius: 15px;
 
@@ -211,6 +211,21 @@
   padding: var(--spacing-md);
   border-radius: var(--border-radius);
   box-shadow: 0 6px 10px var(--color-border);
+}
+
+.widget-card {
+  background-color: rgba(0, 0, 255, 0.321);
+  padding: 8px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.weather-icon {
+  height: 32px;
+}
+
+.icon-container {
+  gap: 8px;
 }
 /*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ HEADER ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
 
@@ -596,6 +611,50 @@ strong {
 .btn-cheatsheet:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 10px var(--color-border);
+}
+
+.project-title {
+  margin-bottom: 24px;
+}
+
+.tags-container {
+  margin-top: 16px;
+  margin-bottom: 40px;
+}
+
+.projects-links {
+  display: flex;
+  margin-bottom: 16px;
+  gap: 8px;
+}
+
+.btn-primary, .btn-secundary {
+  display: inline-block; 
+  transition: transform 0.3s ease; 
+  padding: 8px 16px; 
+}
+
+.btn-primary {
+  background-color: var(--ink-black);
+  color: var(--beige);
+  border: solid 4px var(--ink-black);
+  border-radius: var(--border-radius);
+}
+
+.btn-secundary {
+  border: solid 4px var(--ink-black);
+  border-radius: var(--border-radius);
+  color: var(--ink-black);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+}
+
+.btn-secundary:hover {
+  transform: translateY(-2px);
+  background-color: var(--ink-black);
+  color: beige;
 }
 
 /*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ MAIN ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
