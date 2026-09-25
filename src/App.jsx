@@ -1,10 +1,66 @@
 import { projects } from './data/projects';
 import { skillGroups } from './data/skills';
+import {
+  SiCloudinary,
+  SiCss3,
+  SiExpress,
+  SiGit,
+  SiGithub,
+  SiHtml5,
+  SiJest,
+  SiJavascript,
+  SiJsonwebtokens,
+  SiMongodb,
+  SiNetlify,
+  SiNodedotjs,
+  SiOpenapi,
+  SiPostgresql,
+  SiPostman,
+  SiPrisma,
+  SiReact,
+  SiReactrouter,
+  SiRedux,
+  SiRender,
+  SiStripe,
+  SiSwagger,
+} from 'react-icons/si';
+import { FiCode2 } from 'react-icons/fi';
 
-const profileImage = 'https://res.cloudinary.com/do0white9/image/upload/v1774280210/IMG_1144_yanrnc.jpg';
+const profileImage =
+  'https://res.cloudinary.com/do0white9/image/upload/v1774280210/IMG_1144_yanrnc.jpg';
+
+const skillIcons = {
+  SiCloudinary,
+  SiCss3,
+  SiExpress,
+  SiGit,
+  SiGithub,
+  SiHtml5,
+  SiJest,
+  SiJavascript,
+  SiJsonwebtokens,
+  SiMongodb,
+  SiNetlify,
+  SiNodedotjs,
+  SiOpenapi,
+  SiPostgresql,
+  SiPostman,
+  SiPrisma,
+  SiReact,
+  SiReactrouter,
+  SiRedux,
+  SiRender,
+  SiStripe,
+  SiSwagger,
+};
 
 function ArrowUpRight() {
   return <span aria-hidden="true">↗</span>;
+}
+
+function SkillIcon({ icon }) {
+  const Icon = skillIcons[icon] ?? FiCode2;
+  return <Icon aria-hidden="true" />;
 }
 
 export default function App() {
@@ -79,13 +135,7 @@ export default function App() {
               src="https://mitienditaonline.netlify.app"
               loading="lazy"
             />
-            <a
-              className="preview-overlay"
-              href="https://mitienditaonline.netlify.app"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Abrir demo del e-commerce"
-            >
+            <a className="preview-overlay" href="https://mitienditaonline.netlify.app" target="_blank" rel="noreferrer" aria-label="Abrir demo del e-commerce">
               Abrir demo ↗
             </a>
           </div>
@@ -93,10 +143,7 @@ export default function App() {
           <div className="project-info">
             <p className="project-eyebrow">{featuredProject.eyebrow}</p>
             <h3>{featuredProject.title}</h3>
-            <p>
-              Una aplicación e-commerce completa que conecta frontend, backend,
-              persistencia de datos y servicios externos en un único producto.
-            </p>
+            <p>Una aplicación e-commerce completa que conecta frontend, backend, persistencia de datos y servicios externos en un único producto.</p>
             <div className="project-highlights">
               <span>Autenticación</span>
               <span>Carrito & wishlist</span>
@@ -106,9 +153,7 @@ export default function App() {
               <span>Responsive</span>
             </div>
             <div className="tags">
-              {featuredProject.technologies.map((technology) => (
-                <span key={technology}>{technology}</span>
-              ))}
+              {featuredProject.technologies.map((technology) => <span key={technology}>{technology}</span>)}
             </div>
             <div className="project-links">
               <a href="https://mitienditaonline.netlify.app" target="_blank" rel="noreferrer">Demo <ArrowUpRight /></a>
@@ -149,15 +194,8 @@ export default function App() {
           <h2>Me gusta entender cómo funciona todo el producto.</h2>
         </div>
         <div className="about-copy">
-          <p>
-            Mi formación en desarrollo web Full Stack me llevó a trabajar tanto
-            en frontend como en backend, desde la interfaz hasta la base de datos
-            y la API.
-          </p>
-          <p>
-            Me interesa seguir desarrollándome como software developer, construyendo
-            aplicaciones útiles, mantenibles y bien estructuradas junto a un buen equipo.
-          </p>
+          <p>Mi formación en desarrollo web Full Stack me llevó a trabajar tanto en frontend como en backend, desde la interfaz hasta la base de datos y la API.</p>
+          <p>Me interesa seguir desarrollándome como software developer, construyendo aplicaciones útiles, mantenibles y bien estructuradas junto a un buen equipo.</p>
           <div className="about-meta">
             <div><span>FORMACIÓN</span><strong>Full Stack Web Development</strong></div>
             <div><span>INTERESES</span><strong>Frontend · Backend · Full Stack</strong></div>
@@ -174,7 +212,14 @@ export default function App() {
           {skillGroups.map((group) => (
             <div className="stack-group" key={group.label}>
               <h3>{group.label}</h3>
-              <div>{group.skills.map((skill) => <span key={skill}>{skill}</span>)}</div>
+              <div className="skill-list">
+                {group.skills.map((skill) => (
+                  <span className="skill-item" key={skill.name}>
+                    <span className="skill-icon"><SkillIcon icon={skill.icon} /></span>
+                    <span>{skill.name}</span>
+                  </span>
+                ))}
+              </div>
             </div>
           ))}
         </div>
