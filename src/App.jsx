@@ -7,10 +7,10 @@ function ArrowUpRight() {
   return <span aria-hidden="true">↗</span>;
 }
 
-function SkillIcon({ icon, name }) {
+function SkillIcon({ icon, iconUrl, name }) {
   return (
     <img
-      src={`https://cdn.simpleicons.org/${icon}/5f5c56`}
+      src={iconUrl ?? `https://cdn.simpleicons.org/${icon}/5f5c56`}
       alt=""
       aria-hidden="true"
       title={name}
@@ -175,7 +175,7 @@ export default function App() {
               <div className="skill-list">
                 {group.skills.map((skill) => (
                   <span className="skill-item" key={skill.name}>
-                    <span className="skill-icon"><SkillIcon icon={skill.icon} name={skill.name} /></span>
+                    <span className="skill-icon"><SkillIcon icon={skill.icon} iconUrl={skill.iconUrl} name={skill.name} /></span>
                     <span>{skill.name}</span>
                   </span>
                 ))}
