@@ -1,0 +1,27 @@
+.introStrip {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding-block: 24px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.introStrip strong {
+  font: 600 20px 'Space Grotesk';
+  letter-spacing: -0.02em;
+}
+
+.introStrip p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+  max-width: 520px;
+}
+
+@media (max-width: 900px) {
+  .introStrip {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
