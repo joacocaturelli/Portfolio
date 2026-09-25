@@ -1,0 +1,56 @@
+
+.sectionShell {
+  width: min(calc(100% - 48px), var(--max-width));
+  margin-inline: auto;
+}
+
+.sectionBlock {
+  padding-block: 100px;
+  border-top: 0;
+}
+
+.kicker {
+  margin: 0 0 16px;
+  font: 600 12px/1.2 'Space Grotesk', sans-serif;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+}
+
+.sectionHeading {
+  display: grid;
+  grid-template-columns: 0.65fr 1fr;
+  gap: 40px;
+  margin-bottom: 46px;
+}
+
+.sectionHeading h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(40px, 4.6vw, 64px);
+  letter-spacing: -0.055em;
+  line-height: 0.98;
+  margin: 0;
+}
+
+.sectionHeading > p:last-child {
+  align-self: end;
+  max-width: 360px;
+  margin: 0;
+  color: var(--muted);
+}
+
+@media (max-width: 900px) {
+  .sectionHeading {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+
+@media (max-width: 640px) {
+  .sectionShell {
+    width: min(calc(100% - 32px), var(--max-width));
+  }
+
+  .sectionBlock {
+    padding-block: 78px;
+  }
+}

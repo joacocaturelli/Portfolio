@@ -1,11 +1,12 @@
 import ArrowUpRight from '../common/ArrowUpRight';
 import EcommercePreview from './EcommercePreview';
+import styles from './projects.module.css';
 
 export default function FeaturedProject({ project }) {
   return (
-    <article className="featured-project">
-      <div className="project-preview">
-        <div className="browser-bar">
+    <article className={styles.featuredProject}>
+      <div className={styles.projectPreview}>
+        <div className={styles.browserBar}>
           <span></span>
           <span></span>
           <span></span>
@@ -15,7 +16,7 @@ export default function FeaturedProject({ project }) {
         <EcommercePreview />
 
         <a
-          className="preview-overlay"
+          className={styles.previewOverlay}
           href={project.demo}
           target="_blank"
           rel="noreferrer"
@@ -25,24 +26,24 @@ export default function FeaturedProject({ project }) {
         </a>
       </div>
 
-      <div className="project-info">
-        <p className="project-eyebrow">{project.eyebrow}</p>
+      <div className={styles.projectInfo}>
+        <p className={styles.projectEyebrow}>{project.eyebrow}</p>
         <h3>{project.title}</h3>
         <p>{project.description}</p>
 
-        <div className="project-highlights">
+        <div className={styles.projectHighlights}>
           {project.highlights.map((highlight) => (
             <span key={highlight}>{highlight}</span>
           ))}
         </div>
 
-        <div className="tags">
+        <div className={styles.tags}>
           {project.technologies.map((technology) => (
             <span key={technology}>{technology}</span>
           ))}
         </div>
 
-        <div className="project-links">
+        <div className={styles.projectLinks}>
           <a href={project.demo} target="_blank" rel="noreferrer">
             Demo <ArrowUpRight />
           </a>

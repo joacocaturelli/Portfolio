@@ -1,12 +1,18 @@
+import styles from './AboutSection.module.css';
+import shared from '../../styles/shared.module.css';
+
 export default function AboutSection() {
   return (
-    <section id="about" className="section-shell section-block split-section">
+    <section
+      id="about"
+      className={`${shared.sectionShell} ${shared.sectionBlock} ${styles.splitSection}`}
+    >
       <div>
-        <p className="kicker">02 — SOBRE MÍ</p>
+        <p className={shared.kicker}>02 — SOBRE MÍ</p>
         <h2>Me gusta entender cómo funciona todo el producto.</h2>
       </div>
 
-      <div className="about-copy">
+      <div className={styles.aboutCopy}>
         <p>
           Mi formación en desarrollo web Full Stack me llevó a trabajar tanto
           en frontend como en backend, desde la interfaz hasta la base de
@@ -19,7 +25,7 @@ export default function AboutSection() {
           junto a un buen equipo.
         </p>
 
-        <div className="about-meta">
+        <div className={styles.aboutMeta}>
           <div>
             <span>FORMACIÓN</span>
             <strong>Full Stack Web Development</strong>

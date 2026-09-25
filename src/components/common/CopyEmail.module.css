@@ -1,0 +1,23 @@
+.contactCopy {
+  width: 100%;
+  padding: 15px 0;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  background: none;
+  color: inherit;
+  font: 600 19px 'Space Grotesk';
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.contactCopy:hover {
+  opacity: 0.55;
+}
+
+.isCopied {
+  color: var(--accent);
+}

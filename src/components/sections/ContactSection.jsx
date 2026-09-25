@@ -1,15 +1,20 @@
 import ArrowUpRight from '../common/ArrowUpRight';
 import CopyEmail from '../common/CopyEmail';
+import styles from './ContactSection.module.css';
+import shared from '../../styles/shared.module.css';
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="section-shell contact-section">
+    <section
+      id="contact"
+      className={`${shared.sectionShell} ${styles.contactSection}`}
+    >
       <div>
-        <p className="kicker">04 — CONTACTO</p>
+        <p className={shared.kicker}>04 — CONTACTO</p>
         <h2>¿Trabajamos juntos?</h2>
       </div>
 
-      <div className="contact-links">
+      <div className={styles.contactLinks}>
         <CopyEmail />
 
         <a

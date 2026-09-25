@@ -1,0 +1,57 @@
+.splitSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10%;
+}
+
+.splitSection h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(40px, 4.6vw, 64px);
+  letter-spacing: -0.055em;
+  line-height: 0.98;
+  margin: 0;
+}
+
+.aboutCopy {
+  align-self: end;
+  max-width: 560px;
+}
+
+.aboutCopy p {
+  margin: 0 0 22px;
+  font-size: 19px;
+  line-height: 1.6;
+}
+
+.aboutMeta {
+  display: grid;
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.aboutMeta div {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+}
+
+.aboutMeta span {
+  font: 600 10px 'Space Grotesk';
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+
+.aboutMeta strong {
+  font-weight: 600;
+  text-align: right;
+}
+
+@media (max-width: 900px) {
+  .splitSection {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+}
