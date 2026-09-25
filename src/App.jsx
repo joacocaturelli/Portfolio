@@ -86,19 +86,12 @@ export default function App() {
               <span></span><span></span><span></span>
               <small>mitienditaonline.netlify.app</small>
             </div>
-            <iframe
-              title="Vista previa del e-commerce de Joaquín Caturelli"
-              src="https://mitienditaonline.netlify.app"
+            <img
+              className="ecommerce-screenshot"
+              src="/ecommerce-home.svg"
+              alt="Vista de la página de inicio del e-commerce de Joaquín Caturelli"
               loading="lazy"
             />
-            <div className="mobile-preview-card">
-              <span className="mobile-preview-label">DEMO ONLINE</span>
-              <strong>Mi Tiendita</strong>
-              <p>Explorá la aplicación e-commerce completa.</p>
-              <a href="https://mitienditaonline.netlify.app" target="_blank" rel="noreferrer">
-                Abrir demo ↗
-              </a>
-            </div>
             <a className="preview-overlay" href="https://mitienditaonline.netlify.app" target="_blank" rel="noreferrer" aria-label="Abrir demo del e-commerce">
               Abrir demo ↗
             </a>
