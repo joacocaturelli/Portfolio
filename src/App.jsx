@@ -7,19 +7,14 @@ function ArrowUpRight() {
   return <span aria-hidden="true">↗</span>;
 }
 
-function SkillIcon({ icon, iconUrl, name }) {
+function SkillIcon({ iconUrl, name }) {
   return (
-    <img
-      className={iconUrl ? 'skill-logo-original' : ''}
-      src={iconUrl ?? `https://cdn.simpleicons.org/${icon}/5f5c56`}
-      alt=""
-      aria-hidden="true"
+    <span
+      className="skill-logo"
+      role="img"
+      aria-label={name}
       title={name}
-      loading="lazy"
-      referrerPolicy="no-referrer"
-      onError={(event) => {
-        event.currentTarget.style.display = 'none';
-      }}
+      style={{ '--skill-logo': `url("${iconUrl}")` }}
     />
   );
 }
@@ -176,7 +171,7 @@ export default function App() {
               <div className="skill-list">
                 {group.skills.map((skill) => (
                   <span className="skill-item" key={skill.name}>
-                    <span className="skill-icon"><SkillIcon icon={skill.icon} iconUrl={skill.iconUrl} name={skill.name} /></span>
+                    <span className="skill-icon"><SkillIcon iconUrl={skill.iconUrl} name={skill.name} /></span>
                     <span>{skill.name}</span>
                   </span>
                 ))}
