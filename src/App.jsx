@@ -63,6 +63,33 @@ function ArrowUpRight() {
   return <span aria-hidden="true">↗</span>;
 }
 
+function CopyEmail() {
+  const [copied, setCopied] = useState(false);
+  const email = 'joacocatu@gmail.com';
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(email);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 1800);
+    } catch {
+      setCopied(true);
+    }
+  };
+
+  return (
+    <button
+      className={`contact-copy${copied ? ' is-copied' : ''}`}
+      type="button"
+      onClick={handleCopy}
+      aria-label={copied ? 'Email copiado' : 'Copiar email'}
+    >
+      <span>{copied ? email : 'Email'}</span>
+      <span aria-hidden="true">{copied ? '✓' : '↗'}</span>
+    </button>
+  );
+}
+
 function EcommercePreview() {
   const [showFallback, setShowFallback] = useState(false);
   const [liveLoaded, setLiveLoaded] = useState(false);
@@ -377,7 +404,7 @@ export default function App() {
             <h2>¿Trabajamos juntos?</h2>
           </div>
           <div className="contact-links">
-            <span className="contact-email">joacocatu@gmail.com</span>
+            <CopyEmail />
             <a
               href="https://www.linkedin.com/in/joaquincaturelli/"
               target="_blank"
