@@ -53,7 +53,7 @@ export default function App() {
             <span>React</span>
             <span>Node.js</span>
             <span>REST APIs</span>
-            <span>SQL</span>
+            <span>JavaScript</span>
           </div>
         </div>
 
@@ -91,6 +91,14 @@ export default function App() {
               src="https://mitienditaonline.netlify.app"
               loading="lazy"
             />
+            <div className="mobile-preview-card">
+              <span className="mobile-preview-label">DEMO ONLINE</span>
+              <strong>Mi Tiendita</strong>
+              <p>Explorá la aplicación e-commerce completa.</p>
+              <a href="https://mitienditaonline.netlify.app" target="_blank" rel="noreferrer">
+                Abrir demo ↗
+              </a>
+            </div>
             <a className="preview-overlay" href="https://mitienditaonline.netlify.app" target="_blank" rel="noreferrer" aria-label="Abrir demo del e-commerce">
               Abrir demo ↗
             </a>
@@ -182,7 +190,7 @@ export default function App() {
       </section>
 
       <section id="contact" className="section-shell contact-section">
-        <div><p className="kicker">04 — CONTACTO</p><h2>¿Hablamos?</h2></div>
+        <div><p className="kicker">04 — CONTACTO</p><h2>¿Trabajamos juntos?</h2></div>
         <div className="contact-links">
           <a href="mailto:TU_EMAIL_AQUI">Email <ArrowUpRight /></a>
           <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight /></a>
