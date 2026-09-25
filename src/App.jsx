@@ -34,12 +34,16 @@ function createFavicon() {
   const c = 'C';
   const jWidth = ctx.measureText(j).width;
 
+  const cX = 9 + jWidth - 2;
   ctx.fillText(j, 9, y);
-  ctx.fillText(c, 9 + jWidth - 2, y);
+  ctx.fillText(c, cX, y);
+
+  const cWidth = ctx.measureText(c).width;
+  const dotX = Math.min(cX + cWidth + 3, 58);
 
   ctx.fillStyle = '#ff5a36';
   ctx.beginPath();
-  ctx.arc(52, 45, 3.5, 0, Math.PI * 2);
+  ctx.arc(dotX, 45, 3.5, 0, Math.PI * 2);
   ctx.fill();
 
   favicon.href = canvas.toDataURL('image/png');
