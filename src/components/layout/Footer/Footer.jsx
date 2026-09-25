@@ -1,5 +1,5 @@
 import styles from './Footer.module.css';
-import shared from '../../styles/shared.module.css';
+import shared from '../../../styles/shared.module.css';
 
 export default function Footer() {
   return (

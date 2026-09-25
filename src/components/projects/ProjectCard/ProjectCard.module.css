@@ -1,0 +1,80 @@
+.projectCard {
+  min-height: 380px;
+  padding: 38px;
+  background: var(--paper);
+  display: flex;
+  flex-direction: column;
+}
+
+.projectCardTop {
+  display: flex;
+  justify-content: space-between;
+}
+
+.projectEyebrow {
+  margin: 0 0 14px;
+  color: var(--accent);
+  font: 600 11px/1.2 'Space Grotesk';
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.projectNumber {
+  font: 500 13px 'Space Grotesk';
+  color: var(--muted);
+}
+
+.projectCard h3 {
+  margin: 54px 0 0;
+  font: 600 38px / 1 'Space Grotesk';
+  letter-spacing: -0.05em;
+}
+
+.projectCard > p:not(.projectEyebrow) {
+  max-width: 520px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 24px;
+}
+
+.tags span {
+  padding: 7px 10px;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  font-size: 11px;
+  line-height: 1;
+}
+
+.projectLinks {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.projectLinks a {
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+
+.projectLinks a:hover {
+  opacity: 0.55;
+}
+
+@media (max-width: 640px) {
+  .projectCard {
+    min-height: 340px;
+    padding: 28px;
+  }
+
+  .projectCard h3 {
+    margin-top: 36px;
+  }
+}

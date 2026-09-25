@@ -75,19 +75,14 @@
   text-transform: uppercase;
 }
 
-.projectInfo h3,
-.projectCard h3 {
+.projectInfo h3 {
   margin: 0;
   font: 600 clamp(32px, 4vw, 52px) / 1 'Space Grotesk';
   letter-spacing: -0.05em;
 }
 
-.projectInfo > p:not(.projectEyebrow),
-.projectCard > p:not(.projectEyebrow) {
-  line-height: 1.6;
-}
-
 .projectInfo > p:not(.projectEyebrow) {
+  line-height: 1.6;
   color: #c0c0c0;
   margin-block: 20px 24px;
 }
@@ -140,64 +135,6 @@
   opacity: 0.55;
 }
 
-.projectGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1px;
-  margin-top: 1px;
-  background: var(--line);
-}
-
-.projectCard {
-  min-height: 380px;
-  padding: 38px;
-  background: var(--paper);
-  display: flex;
-  flex-direction: column;
-}
-
-.projectCardTop {
-  display: flex;
-  justify-content: space-between;
-}
-
-.projectNumber {
-  font: 500 13px 'Space Grotesk';
-  color: var(--muted);
-}
-
-.projectCard h3 {
-  font-size: 38px;
-  margin-top: 54px;
-}
-
-.projectCard > p:not(.projectEyebrow) {
-  max-width: 520px;
-  color: var(--muted);
-}
-
-.projectCard .tags {
-  margin-top: auto;
-  padding-top: 24px;
-}
-
-.projectCard .projectLinks {
-  margin-top: 24px;
-}
-
-.projectNext {
-  background: var(--accent);
-}
-
-.projectNext .projectEyebrow,
-.projectNext .projectNumber {
-  color: var(--ink);
-}
-
-.projectNext > p:not(.projectEyebrow) {
-  color: var(--ink);
-}
-
 @media (max-width: 900px) {
   .featuredProject {
     grid-template-columns: 1fr;
@@ -209,19 +146,6 @@
 }
 
 @media (max-width: 640px) {
-  .projectGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .projectCard {
-    min-height: 340px;
-    padding: 28px;
-  }
-
-  .projectCard h3 {
-    margin-top: 36px;
-  }
-
   .projectPreview {
     min-height: 0;
     padding: 14px;
