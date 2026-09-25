@@ -24,31 +24,39 @@ function createFavicon() {
   ctx.roundRect(0, 0, 64, 64, 14);
   ctx.fill();
 
-  ctx.font = '700 36px "Space Grotesk", sans-serif';
-  ctx.textBaseline = 'middle';
+  const fontSize = 36;
+  const font = `700 ${fontSize}px "Space Grotesk", sans-serif`;
+  const letterSpacing = -2.2;
+
+  ctx.font = font;
   ctx.textAlign = 'left';
+  ctx.textBaseline = 'alphabetic';
+
+  const characters = ['J', 'C', '.'];
+  const widths = characters.map((character) => ctx.measureText(character).width);
+  const totalWidth =
+    widths.reduce((sum, width) => sum + width, 0) +
+    letterSpacing * (characters.length - 1);
+
+  const metrics = ctx.measureText('JC.');
+  const ascent = metrics.actualBoundingBoxAscent || fontSize * 0.72;
+  const descent = metrics.actualBoundingBoxDescent || fontSize * 0.18;
+  const baseline = 32 + (ascent - descent) / 2;
+
+  let x = (64 - totalWidth) / 2;
+
   ctx.fillStyle = '#151515';
+  ctx.fillText(characters[0], x, baseline);
+  x += widths[0] + letterSpacing;
 
-  const y = 33;
-  const j = 'J';
-  const c = 'C';
-  const jWidth = ctx.measureText(j).width;
-
-  const cX = 9 + jWidth - 2;
-  ctx.fillText(j, 9, y);
-  ctx.fillText(c, cX, y);
-
-  const cWidth = ctx.measureText(c).width;
-  const dotX = Math.min(cX + cWidth + 3, 58);
+  ctx.fillText(characters[1], x, baseline);
+  x += widths[1] + letterSpacing;
 
   ctx.fillStyle = '#ff5a36';
-  ctx.beginPath();
-  ctx.arc(dotX, 45, 3.5, 0, Math.PI * 2);
-  ctx.fill();
+  ctx.fillText(characters[2], x, baseline);
 
   favicon.href = canvas.toDataURL('image/png');
 }
-
 function ArrowUpRight() {
   return <span aria-hidden="true">↗</span>;
 }
