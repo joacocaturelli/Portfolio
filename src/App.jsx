@@ -4,6 +4,47 @@ import { skillGroups } from './data/skills';
 const profileImage =
   'https://res.cloudinary.com/do0white9/image/upload/v1774280210/IMG_1144_yanrnc.jpg';
 
+function createFavicon() {
+  if (typeof document === 'undefined') return;
+
+  const favicon = document.getElementById('favicon');
+  if (!favicon) return;
+
+  const canvas = document.createElement('canvas');
+  canvas.width = 64;
+  canvas.height = 64;
+
+  const ctx = canvas.getContext('2d');
+  if (!ctx) return;
+
+  ctx.clearRect(0, 0, 64, 64);
+
+  ctx.fillStyle = '#fffdf8';
+  ctx.beginPath();
+  ctx.roundRect(0, 0, 64, 64, 14);
+  ctx.fill();
+
+  ctx.font = '700 36px "Space Grotesk", sans-serif';
+  ctx.textBaseline = 'middle';
+  ctx.textAlign = 'left';
+  ctx.fillStyle = '#151515';
+
+  const y = 33;
+  const j = 'J';
+  const c = 'C';
+  const jWidth = ctx.measureText(j).width;
+
+  ctx.fillText(j, 9, y);
+  ctx.fillText(c, 9 + jWidth - 2, y);
+
+  ctx.fillStyle = '#ff5a36';
+  ctx.beginPath();
+  ctx.arc(52, 45, 3.5, 0, Math.PI * 2);
+  ctx.fill();
+
+  favicon.href = canvas.toDataURL('image/png');
+}
+
 function ArrowUpRight() {
   return <span aria-hidden="true">↗</span>;
 }
@@ -72,6 +113,10 @@ function SkillIcon({ iconUrl, name }) {
 }
 
 export default function App() {
+  useEffect(() => {
+    document.fonts?.load('700 36px "Space Grotesk"').then(createFavicon);
+  }, []);
+
   const featuredProject = projects.find((project) => project.featured);
   const secondaryProjects = projects.filter((project) => !project.featured);
 
