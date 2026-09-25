@@ -146,7 +146,7 @@ export default function App() {
       <section id="about" className="section-shell section-block split-section">
         <div>
           <p className="kicker">02 — SOBRE MÍ</p>
-          <h2>Estoy empezando mi carrera, pero ya tengo proyectos reales que enseñar.</h2>
+          <h2>Me gusta entender cómo funciona todo el producto.</h2>
         </div>
         <div className="about-copy">
           <p>
@@ -155,13 +155,12 @@ export default function App() {
             y la API.
           </p>
           <p>
-            Ahora busco mi primera oportunidad profesional como desarrollador,
-            donde pueda aportar lo que ya sé y seguir creciendo junto a un equipo
-            con buenas prácticas de ingeniería.
+            Me interesa seguir desarrollándome como software developer, construyendo
+            aplicaciones útiles, mantenibles y bien estructuradas junto a un buen equipo.
           </p>
           <div className="about-meta">
             <div><span>FORMACIÓN</span><strong>Full Stack Web Development</strong></div>
-            <div><span>FOCO</span><strong>Frontend · Backend · Full Stack</strong></div>
+            <div><span>INTERESES</span><strong>Frontend · Backend · Full Stack</strong></div>
           </div>
         </div>
       </section>
@@ -182,7 +181,7 @@ export default function App() {
       </section>
 
       <section id="contact" className="section-shell contact-section">
-        <div><p className="kicker">04 — CONTACTO</p><h2>Estoy buscando mi primera oportunidad profesional.</h2></div>
+        <div><p className="kicker">04 — CONTACTO</p><h2>¿Hablamos?</h2></div>
         <div className="contact-links">
           <a href="mailto:TU_EMAIL_AQUI">Email <ArrowUpRight /></a>
           <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight /></a>
