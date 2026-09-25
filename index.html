@@ -1,86 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-  <!-- metadata -->
   <head>
-    <!-- Titulo de la pagina -->
-    <title>Home - CV & Portfolio de Joaquín Caturelli</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Descripcion de la pagina -->
-    <meta name="description" content="Porfolio profesional de desarrollador en formación" />
-    <!-- Enlaces a los archivos de estilo -->
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/styles.css" />
-    <!-- Icono de la pagina -->
-    <link
-      rel="icon"
-      type="image/png"
-      href="https://res.cloudinary.com/do0white9/image/upload/v1773181650/Bootcamp/Proyecto-1/joaquin_circulo_eba1c5.png"
-    />
+    <meta name="description" content="Portfolio de Joaquín Caturelli — Junior Full Stack Developer." />
+    <meta name="theme-color" content="#111111" />
+    <title>Joaquín Caturelli — Full Stack Developer</title>
   </head>
-
   <body>
-    <!-- Encabezado de la pagina -->
-    <header id="main-header" class="header"></header>
-
-    <main class="main">
-      <div class="container">
-        <section id="about" class="hero">
-          <img
-            class="fotoPerfil"
-            src="https://res.cloudinary.com/do0white9/image/upload/v1774280210/IMG_1144_yanrnc.jpg"
-            alt="Foto de perfil"
-          />
-          <h1>Joaquín Caturelli</h1>
-          <h4>Estudiante Fullstack</h4>
-          <p>
-            ¡Hola! Actualmente estoy realizando el bootcamp de Fullstack en The
-            Bridge.
-          </p>
-        </section>
-
-        <section id="skills-section">
-          <h2>Skills</h2>
-          <div id="skills-container"></div>
-        </section>
-
-        <section id="projects-section">
-          <h2>Proyectos en Progreso</h2>
-          <div id="projects-container">
-            <article class="tarjeta">
-              <h3 class="project-title">Project Break FrontEnd</h3>
-              <p>
-                Aplicación multipágina que reúne 4 herramientas 
-                interactivas accesibles tanto desde un dashboard 
-                central como desde sus propias páginas individuales. 
-                Incluye fondos dinámicos animados y navegación 
-                compartida entre todas las vistas.
-              </p>
-              <div class="tags-container">
-                <span class="tag">HTML5</span>
-                <span class="tag">CSS3</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag">WeatherAPI</span>
-              </div>
-              <div class="projects-links">
-                <a href="https://github.com/joacocaturelli/projectBreakFrontEnd" target="_blank" rel="noopener noreferrer" class="btn-primary">Ver en GitHub</a>
-                <a href="https://joacocaturelli.github.io/projectBreakFrontEnd" target="_blank" rel="noopener noreferrer" class="btn-secundary">Ver Demo</a>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section id="cheatsheets-section">
-          <h2>Cheatsheets</h2>
-          <p>Guías rápidas de referencia para las tecnologías más utilizadas en desarrollo web</p>
-          <div id="cheatsheets-container"></div>
-        </section>
-      </div>
-    </main>
-
-    <!-- Footer de la pagina -->
-    <footer id="main-footer"class="footer"></footer>
-    <!-- Scripts -->
-    <script type="module" src="./js/main.js"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
