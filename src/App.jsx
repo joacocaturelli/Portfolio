@@ -93,7 +93,7 @@ function CopyEmail() {
 function EcommercePreview() {
   const [showFallback, setShowFallback] = useState(false);
   const [liveLoaded, setLiveLoaded] = useState(false);
-  const screenshot = '/projects/ecommerce-home.png';
+  const screenshot = `${import.meta.env.BASE_URL}projects/ecommerce-home.png`;
 
   useEffect(() => {
     if (liveLoaded) return undefined;
