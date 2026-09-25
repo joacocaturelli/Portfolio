@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import styles from './EcommercePreview.module.css';
 
 const DEMO_URL = 'https://mitienditaonline.netlify.app';
 
@@ -26,7 +27,7 @@ export default function EcommercePreview() {
   return (
     <>
       <iframe
-        className={`ecommerce-live-preview${showFallback ? ' is-hidden' : ''}`}
+        className={`${styles.livePreview}${showFallback ? ` ${styles.livePreviewHidden}` : ''}`}
         title="Demo del e-commerce de Joaquín Caturelli"
         src={DEMO_URL}
         loading="lazy"
@@ -37,7 +38,7 @@ export default function EcommercePreview() {
         onError={() => setShowFallback(true)}
       />
 
-      <div className={`ecommerce-fallback${showFallback ? ' is-visible' : ''}`}>
+      <div className={`${styles.fallback}${showFallback ? ` ${styles.fallbackVisible}` : ''}`}>
         <img
           src={screenshot}
           alt="Screenshot de la página de inicio del e-commerce de Joaquín Caturelli"
@@ -45,7 +46,7 @@ export default function EcommercePreview() {
           onError={handleScreenshotError}
         />
 
-        <div className="ecommerce-fallback-placeholder">
+        <div className={styles.fallbackPlaceholder}>
           <span>SCREENSHOT DEL PROYECTO</span>
           <strong>ecommerce-home.png</strong>
           <p>
