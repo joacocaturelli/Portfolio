@@ -1,7 +1,7 @@
-import { skillGroups } from '../../data/skills';
-import SkillIcon from '../common/SkillIcon';
+import { skillGroups } from '../../../data/skills';
+import SkillIcon from '../../common/SkillIcon/SkillIcon';
 import styles from './StackSection.module.css';
-import shared from '../../styles/shared.module.css';
+import shared from '../../../styles/shared.module.css';
 
 export default function StackSection() {
   return (

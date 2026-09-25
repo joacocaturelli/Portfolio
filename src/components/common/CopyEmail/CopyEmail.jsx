@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import ArrowUpRight from './ArrowUpRight';
+import ArrowUpRight from '../ArrowUpRight/ArrowUpRight';
 import styles from './CopyEmail.module.css';
 
 const EMAIL = 'joacocatu@gmail.com';

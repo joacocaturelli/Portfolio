@@ -1,5 +1,5 @@
 import styles from './IntroStrip.module.css';
-import shared from '../../styles/shared.module.css';
+import shared from '../../../styles/shared.module.css';
 
 export default function IntroStrip() {
   return (

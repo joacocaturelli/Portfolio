@@ -1,8 +1,8 @@
-import { projects } from '../../data/projects';
-import FeaturedProject from './FeaturedProject';
-import ProjectCard from './ProjectCard';
-import styles from './projects.module.css';
-import shared from '../../styles/shared.module.css';
+import { projects } from '../../../data/projects';
+import FeaturedProject from '../FeaturedProject/FeaturedProject';
+import ProjectCard from '../ProjectCard/ProjectCard';
+import styles from './ProjectsSection.module.css';
+import shared from '../../../styles/shared.module.css';
 
 export default function ProjectsSection() {
   const featuredProject = projects.find((project) => project.featured);
@@ -30,7 +30,7 @@ export default function ProjectsSection() {
           />
         ))}
 
-        <article className={`${styles.projectCard} ${styles.projectNext}`}>
+        <article className={styles.projectNextCard}>
           <span className={styles.projectNumber}>
             {String(secondaryProjects.length + 2).padStart(2, '0')}
           </span>

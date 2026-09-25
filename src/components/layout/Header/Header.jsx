@@ -1,6 +1,6 @@
-import ArrowUpRight from '../common/ArrowUpRight';
+import ArrowUpRight from '../../common/ArrowUpRight/ArrowUpRight';
 import styles from './Header.module.css';
-import shared from '../../styles/shared.module.css';
+import shared from '../../../styles/shared.module.css';
 
 const links = [
   { href: '#work', label: 'Proyectos' },

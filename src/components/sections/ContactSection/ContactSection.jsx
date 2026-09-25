@@ -1,7 +1,7 @@
-import ArrowUpRight from '../common/ArrowUpRight';
-import CopyEmail from '../common/CopyEmail';
+import ArrowUpRight from '../../common/ArrowUpRight/ArrowUpRight';
+import CopyEmail from '../../common/CopyEmail/CopyEmail';
 import styles from './ContactSection.module.css';
-import shared from '../../styles/shared.module.css';
+import shared from '../../../styles/shared.module.css';
 
 export default function ContactSection() {
   return (

@@ -1,5 +1,5 @@
-import ArrowUpRight from '../common/ArrowUpRight';
-import styles from './projects.module.css';
+import ArrowUpRight from '../../common/ArrowUpRight/ArrowUpRight';
+import styles from './ProjectCard.module.css';
 
 export default function ProjectCard({ project, number }) {
   return (

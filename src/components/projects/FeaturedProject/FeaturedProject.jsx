@@ -1,6 +1,6 @@
-import ArrowUpRight from '../common/ArrowUpRight';
-import EcommercePreview from './EcommercePreview';
-import styles from './projects.module.css';
+import ArrowUpRight from '../../common/ArrowUpRight/ArrowUpRight';
+import EcommercePreview from '../EcommercePreview/EcommercePreview';
+import styles from './FeaturedProject.module.css';
 
 export default function FeaturedProject({ project }) {
   return (

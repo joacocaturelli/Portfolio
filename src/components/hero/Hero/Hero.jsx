@@ -1,6 +1,6 @@
-import ArrowUpRight from '../common/ArrowUpRight';
+import ArrowUpRight from '../../common/ArrowUpRight/ArrowUpRight';
 import styles from './Hero.module.css';
-import shared from '../../styles/shared.module.css';
+import shared from '../../../styles/shared.module.css';
 
 const PROFILE_IMAGE =
   'https://res.cloudinary.com/do0white9/image/upload/v1774280210/IMG_1144_yanrnc.jpg';

@@ -1,5 +1,5 @@
 import styles from './AboutSection.module.css';
-import shared from '../../styles/shared.module.css';
+import shared from '../../../styles/shared.module.css';
 
 export default function AboutSection() {
   return (
