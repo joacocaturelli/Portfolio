@@ -1,7 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap');
-  </style>
   <rect width="64" height="64" rx="14" fill="#fffdf8"/>
-  <text x="32" y="43" text-anchor="middle" font-family="Space Grotesk, Arial, sans-serif" font-size="35" font-weight="700" letter-spacing="-3.2" fill="#151515">JC<tspan fill="#ff5a36">.</tspan></text>
+  <path d="M10 16h10v24c0 6 3 9 8 9s8-3 8-9V16h10v24c0 12-7 19-18 19S10 52 10 40V16Z" fill="#151515" transform="translate(-1 -1) scale(.72)"/>
+  <path d="M54 16c-11 0-18 7-18 17s7 17 18 17c4 0 8-1 11-4l-5-7c-2 2-4 3-6 3-5 0-8-3-8-9s3-9 8-9c2 0 4 1 6 3l5-7c-3-3-7-4-11-4Z" fill="#151515" transform="translate(-5 -2) scale(.72)"/>
+  <circle cx="57" cy="50" r="4.5" fill="#ff5a36"/>
 </svg>
