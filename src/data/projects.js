@@ -10,13 +10,13 @@ export const projects = [
     featured: true,
   },
   {
-    title: 'Project Break',
+    title: 'Tools Dashboard',
     eyebrow: 'Proyecto secundario',
     description:
       'Dashboard multipágina que reúne herramientas interactivas y APIs externas.',
     technologies: ['JavaScript', 'HTML5', 'CSS3', 'APIs'],
-    github: 'https://github.com/joacocaturelli/projectBreakFrontEnd',
-    demo: 'https://joacocaturelli.github.io/projectBreakFrontEnd',
+    github: 'https://github.com/joacocaturelli/Tools-Dashboard',
+    demo: 'https://joacocaturelli.github.io/Tools-Dashboard/',
     featured: false,
   },
 ];

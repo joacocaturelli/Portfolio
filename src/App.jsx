@@ -377,8 +377,13 @@ export default function App() {
             <h2>¿Trabajamos juntos?</h2>
           </div>
           <div className="contact-links">
-            <a href="mailto:joacocatu@gmail.com">
-              Email <ArrowUpRight />
+            <span className="contact-email">joacocatu@gmail.com</span>
+            <a
+              href="https://www.linkedin.com/in/joaquincaturelli/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn <ArrowUpRight />
             </a>
             <a
               href="https://github.com/joacocaturelli"
