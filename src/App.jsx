@@ -1,8 +1,5 @@
 import { projects } from './data/projects';
 import { skillGroups } from './data/skills';
-import * as skillIcons from 'react-icons/si';
-import { FiCode2 } from 'react-icons/fi';
-
 const profileImage =
   'https://res.cloudinary.com/do0white9/image/upload/v1774280210/IMG_1144_yanrnc.jpg';
 
@@ -10,9 +7,20 @@ function ArrowUpRight() {
   return <span aria-hidden="true">↗</span>;
 }
 
-function SkillIcon({ icon }) {
-  const Icon = skillIcons[icon] ?? FiCode2;
-  return <Icon aria-hidden="true" />;
+function SkillIcon({ icon, name }) {
+  return (
+    <img
+      src={`https://cdn.simpleicons.org/${icon}/5f5c56`}
+      alt=""
+      aria-hidden="true"
+      title={name}
+      loading="lazy"
+      referrerPolicy="no-referrer"
+      onError={(event) => {
+        event.currentTarget.style.display = 'none';
+      }}
+    />
+  );
 }
 
 export default function App() {
@@ -167,7 +175,7 @@ export default function App() {
               <div className="skill-list">
                 {group.skills.map((skill) => (
                   <span className="skill-item" key={skill.name}>
-                    <span className="skill-icon"><SkillIcon icon={skill.icon} /></span>
+                    <span className="skill-icon"><SkillIcon icon={skill.icon} name={skill.name} /></span>
                     <span>{skill.name}</span>
                   </span>
                 ))}
