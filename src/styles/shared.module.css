@@ -1,5 +1,3 @@
-@value ink: #151515;
-@value paper: #f3f1ec;
 
 .sectionShell {
   width: min(calc(100% - 48px), var(--max-width));
