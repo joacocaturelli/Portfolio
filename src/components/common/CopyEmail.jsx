@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import ArrowUpRight from './ArrowUpRight';
+import styles from './CopyEmail.module.css';
 
 const EMAIL = 'joacocatu@gmail.com';
 
@@ -18,7 +19,7 @@ export default function CopyEmail() {
 
   return (
     <button
-      className={`contact-copy${copied ? ' is-copied' : ''}`}
+      className={`${styles.contactCopy}${copied ? ` ${styles.isCopied}` : ''}`}
       type="button"
       onClick={handleCopy}
       aria-label={copied ? 'Email copiado' : 'Copiar email'}
