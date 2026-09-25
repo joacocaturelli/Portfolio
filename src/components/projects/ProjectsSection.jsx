@@ -1,16 +1,18 @@
 import { projects } from '../../data/projects';
 import FeaturedProject from './FeaturedProject';
 import ProjectCard from './ProjectCard';
+import styles from './projects.module.css';
+import shared from '../../styles/shared.module.css';
 
 export default function ProjectsSection() {
   const featuredProject = projects.find((project) => project.featured);
   const secondaryProjects = projects.filter((project) => !project.featured);
 
   return (
-    <section id="work" className="section-shell section-block">
-      <div className="section-heading">
+    <section id="work" className={`${shared.sectionShell} ${shared.sectionBlock}`}>
+      <div className={shared.sectionHeading}>
         <div>
-          <p className="kicker">01 — PROYECTOS</p>
+          <p className={shared.kicker}>01 — PROYECTOS</p>
           <h2>Lo que he construido</h2>
         </div>
 
@@ -19,7 +21,7 @@ export default function ProjectsSection() {
 
       {featuredProject && <FeaturedProject project={featuredProject} />}
 
-      <div className="project-grid">
+      <div className={styles.projectGrid}>
         {secondaryProjects.map((project, index) => (
           <ProjectCard
             key={project.title}
@@ -28,12 +30,12 @@ export default function ProjectsSection() {
           />
         ))}
 
-        <article className="project-card project-next">
-          <span className="project-number">
+        <article className={`${styles.projectCard} ${styles.projectNext}`}>
+          <span className={styles.projectNumber}>
             {String(secondaryProjects.length + 2).padStart(2, '0')}
           </span>
 
-          <p className="project-eyebrow">PRÓXIMAMENTE</p>
+          <p className={styles.projectEyebrow}>PRÓXIMAMENTE</p>
           <h3>Más proyectos en construcción.</h3>
           <p>Este portfolio seguirá creciendo con nuevos proyectos.</p>
         </article>
