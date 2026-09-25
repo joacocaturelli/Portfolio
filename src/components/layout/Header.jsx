@@ -1,4 +1,6 @@
 import ArrowUpRight from '../common/ArrowUpRight';
+import styles from './Header.module.css';
+import shared from '../../styles/shared.module.css';
 
 const links = [
   { href: '#work', label: 'Proyectos' },
@@ -9,8 +11,8 @@ const links = [
 
 export default function Header() {
   return (
-    <header className="site-header">
-      <a className="brand" href="#top" aria-label="Joaquín Caturelli, inicio">
+    <header className={`${shared.sectionShell} ${styles.siteHeader}`}>
+      <a className={styles.brand} href="#top" aria-label="Joaquín Caturelli, inicio">
         JC<span>.</span>
       </a>
 
@@ -23,7 +25,7 @@ export default function Header() {
       </nav>
 
       <a
-        className="header-link"
+        className={styles.headerLink}
         href="https://github.com/joacocaturelli"
         target="_blank"
         rel="noreferrer"
