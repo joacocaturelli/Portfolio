@@ -10,6 +10,7 @@ function ArrowUpRight() {
 function SkillIcon({ icon, iconUrl, name }) {
   return (
     <img
+      className={iconUrl ? 'skill-logo-original' : ''}
       src={iconUrl ?? `https://cdn.simpleicons.org/${icon}/5f5c56`}
       alt=""
       aria-hidden="true"
