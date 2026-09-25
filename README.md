@@ -81,3 +81,7 @@ La vista destacada utiliza la demo desplegada en escritorio y, como fallback, un
 Joaquín Caturelli
 
 GitHub: https://github.com/joacocaturelli
+
+LinkedIn: https://www.linkedin.com/in/joaquincaturelli/
+
+Email: joacocatu@gmail.com
