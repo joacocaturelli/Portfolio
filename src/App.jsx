@@ -84,7 +84,7 @@ function CopyEmail() {
       onClick={handleCopy}
       aria-label={copied ? 'Email copiado' : 'Copiar email'}
     >
-      <span>{copied ? email : 'Email'}</span>
+      <span>{copied ? 'Copiado al portapapeles' : 'Email'}</span>
       <span aria-hidden="true">{copied ? '✓' : '↗'}</span>
     </button>
   );
