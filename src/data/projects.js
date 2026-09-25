@@ -5,8 +5,17 @@ export const projects = [
     description:
       'Aplicación e-commerce full stack con autenticación, catálogo de productos, carrito, wishlist y checkout con pagos de prueba mediante Stripe.',
     technologies: ['React', 'Node.js', 'Express', 'PostgreSQL', 'Prisma', 'Stripe'],
+    highlights: [
+      'Autenticación',
+      'Carrito & wishlist',
+      'Checkout Stripe',
+      'Panel admin',
+      'Reviews',
+      'Responsive',
+    ],
     github: 'https://github.com/joacocaturelli/ecommerce-frontend',
     backendGithub: 'https://github.com/joacocaturelli/ecommerce-api',
+    demo: 'https://mitienditaonline.netlify.app',
     featured: true,
   },
   {
