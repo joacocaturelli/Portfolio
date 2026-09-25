@@ -16,7 +16,7 @@ export const projects = [
       'Dashboard multipágina que reúne herramientas interactivas y APIs externas.',
     technologies: ['JavaScript', 'HTML5', 'CSS3', 'APIs'],
     github: 'https://github.com/joacocaturelli/projectBreakFrontEnd',
-    demo: 'https://joaococaturelli.github.io/projectBreakFrontEnd',
+    demo: 'https://joacocaturelli.github.io/projectBreakFrontEnd',
     featured: false,
   },
 ];
