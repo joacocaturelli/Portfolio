@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { projects } from './data/projects';
 import { skillGroups } from './data/skills';
 const profileImage =
@@ -5,6 +6,46 @@ const profileImage =
 
 function ArrowUpRight() {
   return <span aria-hidden="true">↗</span>;
+}
+
+function EcommercePreview() {
+  const [showFallback, setShowFallback] = useState(false);
+  const screenshot = '/projects/ecommerce-home.png';
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      setShowFallback(true);
+    }, 6000);
+
+    return () => window.clearTimeout(timer);
+  }, []);
+
+  return (
+    <>
+      <iframe
+        className={`ecommerce-live-preview${showFallback ? ' is-hidden' : ''}`}
+        title="Demo del e-commerce de Joaquín Caturelli"
+        src="https://mitienditaonline.netlify.app"
+        loading="lazy"
+        onError={() => setShowFallback(true)}
+      />
+      <div className={`ecommerce-fallback${showFallback ? ' is-visible' : ''}`}>
+        <img
+          src={screenshot}
+          alt="Screenshot de la página de inicio del e-commerce de Joaquín Caturelli"
+          loading="lazy"
+          onError={(event) => {
+            event.currentTarget.style.display = 'none';
+          }}
+        />
+        <div className="ecommerce-fallback-placeholder">
+          <span>SCREENSHOT DEL PROYECTO</span>
+          <strong>ecommerce-home.png</strong>
+          <p>Colocá tu screenshot real en <code>public/projects/ecommerce-home.png</code>.</p>
+        </div>
+      </div>
+    </>
+  );
 }
 
 function SkillIcon({ iconUrl, name }) {
@@ -86,12 +127,7 @@ export default function App() {
               <span></span><span></span><span></span>
               <small>mitienditaonline.netlify.app</small>
             </div>
-            <img
-              className="ecommerce-screenshot"
-              src="/ecommerce-home.svg"
-              alt="Vista de la página de inicio del e-commerce de Joaquín Caturelli"
-              loading="lazy"
-            />
+            <EcommercePreview />
             <a className="preview-overlay" href="https://mitienditaonline.netlify.app" target="_blank" rel="noreferrer" aria-label="Abrir demo del e-commerce">
               Abrir demo ↗
             </a>
