@@ -1,6 +1,9 @@
 const icon = (name) =>
   `https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/${name}.svg`;
 
+const devIcon = (name) =>
+  `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${name}/${name}-original.svg`;
+
 export const skillGroups = [
   {
     label: 'Core',
@@ -23,7 +26,7 @@ export const skillGroups = [
     skills: [
       { name: 'Node.js', iconUrl: icon('nodedotjs') },
       { name: 'Express', iconUrl: icon('express') },
-      { name: 'REST APIs', iconUrl: icon('openapi') },
+      { name: 'REST APIs', iconUrl: devIcon('openapi') },
       { name: 'JWT', iconUrl: icon('jsonwebtokens') },
     ],
   },
