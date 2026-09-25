@@ -1,58 +1,10 @@
 import { projects } from './data/projects';
 import { skillGroups } from './data/skills';
-import {
-  SiCloudinary,
-  SiCss3,
-  SiExpress,
-  SiGit,
-  SiGithub,
-  SiHtml5,
-  SiJest,
-  SiJavascript,
-  SiJsonwebtokens,
-  SiMongodb,
-  SiNetlify,
-  SiNodedotjs,
-  SiOpenapi,
-  SiPostgresql,
-  SiPostman,
-  SiPrisma,
-  SiReact,
-  SiReactrouter,
-  SiRedux,
-  SiRender,
-  SiStripe,
-  SiSwagger,
-} from 'react-icons/si';
+import * as skillIcons from 'react-icons/si';
 import { FiCode2 } from 'react-icons/fi';
 
 const profileImage =
   'https://res.cloudinary.com/do0white9/image/upload/v1774280210/IMG_1144_yanrnc.jpg';
-
-const skillIcons = {
-  SiCloudinary,
-  SiCss3,
-  SiExpress,
-  SiGit,
-  SiGithub,
-  SiHtml5,
-  SiJest,
-  SiJavascript,
-  SiJsonwebtokens,
-  SiMongodb,
-  SiNetlify,
-  SiNodedotjs,
-  SiOpenapi,
-  SiPostgresql,
-  SiPostman,
-  SiPrisma,
-  SiReact,
-  SiReactrouter,
-  SiRedux,
-  SiRender,
-  SiStripe,
-  SiSwagger,
-};
 
 function ArrowUpRight() {
   return <span aria-hidden="true">↗</span>;
