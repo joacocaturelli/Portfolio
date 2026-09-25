@@ -1,0 +1,16 @@
+.skillLogo {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: currentColor;
+  mask-image: var(--skill-logo);
+  -webkit-mask-image: var(--skill-logo);
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-position: center;
+  mask-size: contain;
+  -webkit-mask-size: contain;
+  opacity: 0.72;
+  transition: opacity 0.2s ease;
+}
