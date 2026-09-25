@@ -4,7 +4,7 @@ export const skillGroups = [
     skills: [
       { name: 'JavaScript', icon: 'javascript' },
       { name: 'HTML5', icon: 'html5' },
-      { name: 'CSS3', icon: 'css3' },
+      { name: 'CSS3', icon: 'css3', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg' },
     ],
   },
   {
@@ -20,7 +20,7 @@ export const skillGroups = [
     skills: [
       { name: 'Node.js', icon: 'nodedotjs' },
       { name: 'Express', icon: 'express' },
-      { name: 'REST APIs', icon: 'openapi' },
+      { name: 'REST APIs', icon: 'openapi', iconUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/openapi/openapi-original.svg' },
       { name: 'JWT', icon: 'jsonwebtokens' },
     ],
   },
